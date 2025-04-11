@@ -5,6 +5,13 @@ const app=express()
 let users=[];
 app.use(cors())
 app.use(express.json())
+
+
+app.get('/', (req, res) => {
+    res.send('Server is up and running on port 9000 🚀');
+  });
+
+
 const readdata= async ()=>{
     users=JSON.parse(await fs.readFile('./data.json', 'utf8'));
 }
