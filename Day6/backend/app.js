@@ -7,6 +7,13 @@ app.use(cors())
 app.use(express.json())
 
 
+const PORT = process.env.PORT || 9000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+
+
 app.get('/', (req, res) => {
     res.send('Server is up and running on port 9000 🚀');
   });
@@ -61,6 +68,9 @@ app.delete('/users/:id',(req,res)=>{
         res.status(200).json({message: 'User deleted successfully'});
     }
 })
+
+/*
 app.listen(9000,()=>{
     console.log('Server is running on port 9000')
 })
+    */
