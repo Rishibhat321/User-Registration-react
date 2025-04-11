@@ -43,7 +43,8 @@ const View = () => {
 
   const viewdata = async () => {
     try {
-      const res = await axios.get('http://localhost:9000/users');
+   //     const res = await axios.get('http://localhost:9000/users');
+     const res = await axios.get('https://user-registration-backend.onrender.com/users');
       setUsers(res.data);
     } catch (error) {
       console.error("Error fetching users:", error);
